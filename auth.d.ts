@@ -14,7 +14,7 @@ export type LoginUserRequest = {
   password: string;
 };
 
-export type LoginUserResponse = {
+export type UserAccessResponse = {
   userId: string;
   username: string;
   sessionId: string;
