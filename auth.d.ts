@@ -1,16 +1,9 @@
-export type UserSummary = {
-  userId: string;
-  username: string;
-};
-
 export type RegisterUserRequest = {
   username: string;
   email: string;
   password: string;
   passwordConfirmation: string;
 };
-
-export type RegisterUserResponse = UserSummary;
 
 export type UnregisterUserRequest = {
   passwordConfirmation: string;
@@ -21,7 +14,9 @@ export type LoginUserRequest = {
   password: string;
 };
 
-export type LoginUserResponse = UserSummary & {
+export type LoginUserResponse = {
+  userId: string;
+  username: string;
   sessionId: string;
   expiresAt: string;
 };
