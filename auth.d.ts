@@ -21,6 +21,14 @@ export type UserAccessResponse = {
   expiresAt: string;
 };
 
+export type UsernameAvailabilityRequest = {
+  username: string;
+};
+
+export type UsernameAvailabilityResponse = {
+  available: boolean;
+};
+
 // Sign out (logout_user) has no request or response body.
 // The session is identified by the Authorization header.
 
