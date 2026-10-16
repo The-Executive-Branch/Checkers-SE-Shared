@@ -1,3 +1,10 @@
+export type AuthRoute =
+  | "/auth/register"
+  | "/auth/login"
+  | "/auth/logout"
+  | "/auth/unregister"
+  | "/auth/username-available";
+
 export type RegisterUserRequest = {
   username: string;
   email: string;
