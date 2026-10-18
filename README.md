@@ -7,7 +7,7 @@ This package holds the data models shared between the Electron client and the Ex
 To add this package as a dependency to the Electon client and Express server, run the following command in the terminal:
 
 ```bash
-npm install -D github:The-Executive-Branch/Checkers-SE-Shared#v1.2.0
+npm install -D github:The-Executive-Branch/Checkers-SE-Shared#v1.3.0
 ```
 
 Verify the package is included by checking the `devDependencies` in `package.json`
