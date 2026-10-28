@@ -3,7 +3,12 @@
   "version": "1.4.1",
   "types": "index.d.ts",
   "scripts": {
+    "test": "tsc -p type-tests",
     "release:patch": "npm version patch -m \"chore: release %s\" && git push origin main --follow-tags",
-    "release:minor": "npm version minor -m \"chore: release %s\" && git push origin main --follow-tags"
+    "release:minor": "npm version minor -m \"chore: release %s\" && git push origin main --follow-tags",
+    "release:major": "npm version major -m \"chore: release %s\" && git push origin main --follow-tags"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }
