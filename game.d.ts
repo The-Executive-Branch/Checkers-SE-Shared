@@ -23,6 +23,40 @@ export type CheckerPiece = Position & {
   isKing: boolean;
 };
 
+export type Move = {
+  //this is a blueprint used for each move that will be saved in the db
+  from: Position;
+  to: Position;
+  capturedIds?: string[];
+  kingId?: string;
+  jumpFrom?: Position;
+  nextPlayerTurn: CheckerColor;
+};
+
+export type GameRecord = {
+  //This is what the client sends when a game is finished and needs to be saved
+  gameId: GameId;
+  players: { red: Player; black: Player }; //if the player is a guest, the name will be saved instead of the username and names are stored in the DB as well
+  winner: CheckerColor;
+  moves: Move[];
+  endedAt?: string; //this is what the server will return when a specfic game is requested, just adds the timestamp for when the game occured
+};
+
+export type GetGameRecordsResponse = {
+  //this is what the server will return when a client requests game records
+  data: GameRecord | GameRecord[];
+};
+
+export type getGameRecordByGameId = {
+  //allows client to request a specific game by its id
+  gameId: GameId;
+};
+
+export type getGameRecordByUsername = {
+  //allows client to request all games played by a specific user
+  username: string;
+};
+
 export type GameStatus =
   | { state: "waiting" }
   | { state: "inProgress" }
