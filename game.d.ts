@@ -47,12 +47,12 @@ export type GetGameRecordsResponse = {
   data: GameRecord | GameRecord[];
 };
 
-export type getGameRecordByGameId = {
+export type GetGameRecordByGameIdRequest = {
   //allows client to request a specific game by its id
   gameId: GameId;
 };
 
-export type getGameRecordByUsername = {
+export type GetGameRecordByUsernameRequest = {
   //allows client to request all games played by a specific user
   username: string;
 };
